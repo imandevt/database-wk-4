@@ -22,10 +22,11 @@ GROUP BY
     productCode, 
     quantityOrdered
 
-4. 
-use salesdb;
-select checkNumber,
-max(checkNumber) as highest_amount
-from payments
+4.
+SELECT 
+    checkNumber, 
+    MAX(amount) AS highest_amount
+FROM 
+    payments
 GROUP BY 
     checkNumber
